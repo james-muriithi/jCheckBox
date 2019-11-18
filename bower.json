@@ -1,0 +1,25 @@
+{
+    "name": "jquery-jCheckBox",
+    "license": "MIT",
+    "authors": [
+        "James Muriithi <miriithijames556@gmail.com>"
+    ],
+    "description": "A jump-start for jQuery plugins development.",
+    "homepage": "https://github.io.com/james-muriithi/jCheckBox",
+    "keywords": [
+        "jquery",
+        "plugin",
+        "jCheckBox",
+        "jquery-checkbox",
+        "checkbox"
+    ],
+    "main": "src/jquery.boilerplate.js",
+    "dependencies": {
+        "jquery": "3.2.1"
+    },
+    "ignore": [
+        "npm-debug.log",
+        "bower_components",
+        "node_modules"
+    ]
+}

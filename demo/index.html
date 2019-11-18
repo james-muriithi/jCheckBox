@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Boilerplate</title>
+    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="../src/jquery.jCheckBox.js"></script>
+</head>
+
+<body>
+    <form>
+        <div id="myCheckboxes">
+            <input type="checkbox" class="blah blah blah parent" id="j1" value="12">
+            <label for="j1">hello</label>
+            <input type="checkbox" class=" blah parent-j1">
+            <label>hello</label>
+            <input type="checkbox" class="blah parent-j1">
+            <label>hello</label>
+            <input type="checkbox" class="parent-j1">
+            <label>hello</label>
+            <input type="checkbox" class="parent-j1">
+            <label>hello</label>
+            <br>
+            <input type="checkbox" class="blah blah blah parent" id="j2" value="1">
+            <label for="j2">hello</label>
+            <input type="checkbox" class=" blah parent-j2">
+            <label>hello</label>
+            <input type="checkbox" class="blah parent-j2">
+            <label>hello</label>
+            <input type="checkbox" class="parent-j2">
+            <label>hello</label>
+            <input type="checkbox" class="parent-j2">
+            <label>hello</label>
+        </div>
+
+        <div id="myCheckboxes2">
+            <input type="checkbox" class="blah blah blah parent" id="j1" value="1">
+            <label for="j1">hello</label>
+            <input type="checkbox" class=" blah parent-j1" value="2">
+            <label>hello</label>
+            <input type="checkbox" class="blah parent-j1">
+            <label>hello</label>
+            <input type="checkbox" class="parent-j1">
+            <label>hello</label>
+            <input type="checkbox" class="parent-j1">
+            <label>hello</label>
+            <br>
+            <input type="checkbox" class="blah blah blah parent" id="j2">
+            <label for="j2">hello</label>
+            <input type="checkbox" class=" blah parent-j2">
+            <label>hello</label>
+            <input type="checkbox" class="blah parent-j2">
+            <label>hello</label>
+            <input type="checkbox" class="parent-j2">
+            <label>hello</label>
+            <input type="checkbox" class="parent-j2">
+            <label>hello</label>
+        </div>
+    </form>
+    <script>
+        var j = $("#myCheckboxes").jCheckBox();
+        j.css('color', 'red')
+    </script>
+</body>
+
+</html>
