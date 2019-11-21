@@ -22,37 +22,27 @@
     "_spec": "jquery-boilerplate@github:jquery-boilerplate/jquery-boilerplate",
     "_where": "C:\\Users\\James\\AppData\\Roaming\\npm\\node_modules\\generator-jquery-boilerplate",
     "author": {
-        "name": "Zeno Rocha",
-        "email": "zno.rocha@gmail.com",
+        "name": "Jmaes Muriithi",
+        "email": "muriithijames556@gmail.com",
         "url": "https://github.com/zenorocha"
     },
     "bugs": {
         "url": "https://github.com/jquery-boilerplate/jquery-boilerplate/issues"
     },
     "bundleDependencies": false,
-    "contributors": [
-        {
-            "name": "Zeno Rocha",
-            "email": "zno.rocha@gmail.com",
-            "url": "https://github.com/zenorocha"
-        },
-        {
-            "name": "Addy Osmani",
-            "email": "addyosmani@gmail.com",
-            "url": "https://github.com/addyosmani"
-        },
-        {
-            "name": "Helder Santana",
-            "email": "heldr@me.com",
-            "url": "https://github.com/heldr"
-        }
-    ],
+    "contributors": [{
+        "name": "James Muriitih",
+        "email": "muriithijames556@gmail.com",
+        "url": "https://github.com/james-muriithi"
+    }],
     "dependencies": {
-        "jquery": ">=3.2.1"
+        "jquery": ">=3.2.1",
+        "bootstrap": ">=4.3.1"
     },
     "deprecated": false,
-    "description": "A jump-start for jQuery plugins development.",
+    "description": "A jQuery plugin for related checboxes.",
     "devDependencies": {
+        "popper": "^1.0.0",
         "grunt": "^0.4.5",
         "grunt-contrib-coffee": "^0.13.0",
         "grunt-contrib-concat": "^0.5.1",
@@ -69,22 +59,22 @@
         "phantomjs": "^1.9.18",
         "qunitjs": "^1.19.0"
     },
-    "homepage": "http://jqueryboilerplate.com",
+    "homepage": "https://james-muriithi.github.io//jCheckBox/",
     "keywords": [
-        "jquery-plugin",
+        "jquery-checkbox-plugin",
         "jquery",
-        "boilerplate",
-        "plugins"
+        "jCheckBox",
+        "checkbox"
     ],
     "license": "MIT",
-    "name": "jquery-boilerplate",
+    "name": "jquery-jcheckbox",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/jquery-boilerplate/jquery-boilerplate.git"
+        "url": "git+https://github.com/james-muriithi/jCheckBox.git"
     },
     "scripts": {
         "jscs": "jscs src",
         "test": "npm run jscs && grunt travis --verbose"
     },
-    "version": "4.1.0"
+    "version": "1.0.0"
 }

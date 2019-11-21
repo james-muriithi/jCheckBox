@@ -1,6 +1,3 @@
-// the semi-colon before function invocation is a safety net against concatenated
-// scripts and/or other plugins which may not be closed properly.
-
 (function($, window, document, undefined) {
 
     "use strict";
@@ -23,7 +20,6 @@
             onParentUnchecked: function() {},
             onChildUnchecked: function() {}
         };
-
     // The actual plugin constructor
     function jCheckBox(element, options) {
         this.element = element;
@@ -49,17 +45,20 @@
             // and this.settings
             // you can add more functions like the one below and
             // call them like the example below
-            // this.yourOtherFunction("jQuery Boilerplate");
+            //assign this to a variable toa avoid conflicts in the on callback
             var _this = this;
+            //when plugin is initalised listen for parent click and call the approppriate function
             $(this.element).on("click", "input" + this.settings.parentClass + ":checkbox", function(event) {
                 _this.parentClicked(event);
             });
 
+            //when plugin is initalised listen for parent click and call the approppriate function
             $(this.element).on('click', "input[class*='" + this.settings.parentClass.split('.')[1] + "-']:checkbox", function(event) {
                 _this.childClicked(event);
             });
-        },
 
+        },
+        // function to check if there is atleast one checkbox checked
         isAtLeastOneEnabled: function() {
             var atLeastOneEnabled = false;
             $("input[class*='" + this.settings.parentClass.split('.')[1] + "-']:checkbox").each(function(index, el) {
@@ -70,6 +69,7 @@
             });
             return atLeastOneEnabled;
         },
+        // function to be called when child checkbox
         childClicked: function(event) {
             var element = $(event.target);
             var temp = element.attr("class").split(" ").pop().split("-");
@@ -84,41 +84,46 @@
                 this.settings.onChildUnchecked.call(this, event, element);
             }
         },
+        // function to be called when parent checkbox is clicked
         parentClicked: function(event) {
             var element = $(event.target);
             var id = element.attr("id");
             if (element.is(":checked")) {
-                $(this.element).children("input" + this.settings.parentClass + "-" + id).prop("checked", true);
+                $(this.element).find("input" + this.settings.parentClass + "-" + id).prop("checked", true);
                 this.settings.onParentChecked.call(this, event, element);
             } else {
-                $(this.element).children("input" + this.settings.parentClass + "-" + id).prop("checked", false);
+                $(this.element).find("input" + this.settings.parentClass + "-" + id).prop("checked", false);
                 this.settings.onParentUnchecked.call(this, event, element);
             }
-        },
-        checkAll: function() {
-            $(this.element).find("input:checkbox").prop("checked", true);
-            return this;
-        },
-
-        unCheckAll: function() {
-            $(this.element).find("input:checkbox").prop("checked", false);
-            return this;
-        },
-
-        getCheckedValues: function() {
-            var valueArray = [];
-            $(this.element).find("input:checkbox:checked").each(function() {
-                valueArray.push($(this).val());
-            });
-            return valueArray;
         }
-
 
     });
 
     // A really lightweight plugin wrapper around the constructor,
     // preventing against multiple instantiations
     $.fn[pluginName] = function(options) {
+        //public function to check all checkboxes
+        this.checkAll = function() {
+            $(this).find("input:checkbox").prop("checked", true);
+            return this;
+        }
+
+        // public function to uncheck all the checkboxes
+        this.unCheckAll = function() {
+            $(this).find("input:checkbox").prop("checked", false);
+            return this;
+        }
+
+        // public function for getting all the values of checked check boxes
+        this.getCheckedValues = function() {
+            var valueArray = [];
+            $(this).find("input:checkbox:checked").each(function() {
+                valueArray.push($(this).val());
+            });
+            return valueArray;
+        }
+
+        // return this to enable chaining
         return this.each(function() {
             if (!$.data(this, "plugin_" + pluginName)) {
                 $.data(this, "plugin_" +
