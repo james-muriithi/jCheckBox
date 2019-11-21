@@ -2,65 +2,145 @@
 <html>
 
 <head>
-    <title>jQuery Boilerplate</title>
-    <script src="../node_modules/jquery/dist/jquery.min.js"></script>
-    <script src="../src/jquery.jCheckBox.js"></script>
+    <title>jQuery jCheckBox Plugin</title>
 </head>
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+">
 
-<body>
-    <form>
-        <div id="myCheckboxes">
-            <input type="checkbox" class="blah blah blah parent" id="j1" value="12">
-            <label for="j1">hello</label>
-            <input type="checkbox" class=" blah parent-j1">
-            <label>hello</label>
-            <input type="checkbox" class="blah parent-j1">
-            <label>hello</label>
-            <input type="checkbox" class="parent-j1">
-            <label>hello</label>
-            <input type="checkbox" class="parent-j1">
-            <label>hello</label>
-            <br>
-            <input type="checkbox" class="blah blah blah parent" id="j2" value="1">
-            <label for="j2">hello</label>
-            <input type="checkbox" class=" blah parent-j2">
-            <label>hello</label>
-            <input type="checkbox" class="blah parent-j2">
-            <label>hello</label>
-            <input type="checkbox" class="parent-j2">
-            <label>hello</label>
-            <input type="checkbox" class="parent-j2">
-            <label>hello</label>
-        </div>
+<body style="background: #f9f9f9;" class="h-100 container">
+    <form class="card mt-5">
+        <div class="card-body">
+            <h4>User Permissions</h4>
+            <div class="form-row user-permissions mt-5" id="user-permissions">
+                <div class="col-md-3 m-t-20 student">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent" id="1" name="roles[]" value="1">
+                        <label class="custom-control-label" for="1">Manage Student</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-1" id="2" name="roles[]" value="2">
+                        <label class="custom-control-label" for="2">Add Student</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-1" id="3" name="roles[]" value="3">
+                        <label class="custom-control-label" for="3">View Students</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-1" id="9" name="roles[]" value="9">
+                        <label class="custom-control-label" for="9">Edit Student</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-1" id="10" name="roles[]" value="10">
+                        <label class="custom-control-label" for="10">Delete Student</label>
+                    </div>
 
-        <div id="myCheckboxes2">
-            <input type="checkbox" class="blah blah blah parent" id="j1" value="1">
-            <label for="j1">hello</label>
-            <input type="checkbox" class=" blah parent-j1" value="2">
-            <label>hello</label>
-            <input type="checkbox" class="blah parent-j1">
-            <label>hello</label>
-            <input type="checkbox" class="parent-j1">
-            <label>hello</label>
-            <input type="checkbox" class="parent-j1">
-            <label>hello</label>
-            <br>
-            <input type="checkbox" class="blah blah blah parent" id="j2">
-            <label for="j2">hello</label>
-            <input type="checkbox" class=" blah parent-j2">
-            <label>hello</label>
-            <input type="checkbox" class="blah parent-j2">
-            <label>hello</label>
-            <input type="checkbox" class="parent-j2">
-            <label>hello</label>
-            <input type="checkbox" class="parent-j2">
-            <label>hello</label>
+                </div>
+
+                <div class="col-md-3 m-t-20 user">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent" id="4" name="roles[]" value="4">
+                        <label class="custom-control-label" for="4">Manage Users</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-4" id="5" name="roles[]" value="5">
+                        <label class="custom-control-label" for="5">View Users</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-4" id="6" name="roles[]" value="6">
+                        <label class="custom-control-label" for="6">Add User</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-4" id="32" name="roles[]" value="32">
+                        <label class="custom-control-label" for="32">Delete Users</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-4" id="33" name="roles[]" value="33">
+                        <label class="custom-control-label" for="33">Edit Users</label>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 m-t-20 exams">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent" id="7" name="roles[]" value="7">
+                        <label class="custom-control-label" for="7">Manage Exams</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-7" id="8" name="roles[]" value="8">
+                        <label class="custom-control-label" for="8">Enter Marks</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-7" id="13" name="roles[]" value="13">
+                        <label class="custom-control-label" for="13">View Marks</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-7" id="14" name="roles[]" value="14">
+                        <label class="custom-control-label" for="14">Add New Exams</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-7" id="15" name="roles[]" value="15">
+                        <label class="custom-control-label" for="15">View Exams</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-7" id="16" name="roles[]" value="16">
+                        <label class="custom-control-label" for="16">Delete Added Exam</label>
+                    </div>
+
+                </div>
+
+                <div class="col-md-3 m-t-20 fee">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent" id="11" name="roles[]" value="11">
+                        <label class="custom-control-label" for="11">Manage Fee</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-11" id="21" name="roles[]" value="21">
+                        <label class="custom-control-label" for="21">Record Fee</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-11" id="22" name="roles[]" value="22">
+                        <label class="custom-control-label" for="22">Edit Fee Details</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-11" id="23" name="roles[]" value="23">
+                        <label class="custom-control-label" for="23">View Statements</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-11" id="24" name="roles[]" value="24">
+                        <label class="custom-control-label" for="24">Add Extra Fee</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-11" id="25" name="roles[]" value="25">
+                        <label class="custom-control-label" for="25">Manage Discounts</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-11" id="28" name="roles[]" value="28">
+                        <label class="custom-control-label" for="28">Delete Recorded Fee</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-11" id="29" name="roles[]" value="29">
+                        <label class="custom-control-label" for="29">View Deleted Fee</label>
+                    </div>
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input parent-11" id="31" name="roles[]" value="31">
+                        <label class="custom-control-label" for="31">Delete Added Fee</label>
+                    </div>
+
+                </div>
+
+            </div>
         </div>
     </form>
-    <script>
-        var j = $("#myCheckboxes").jCheckBox();
-        j.css('color', 'red')
-    </script>
+
 </body>
 
 </html>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+<script src="../dist/jquery.jCheckBox.min.js"></script>
+<script>
+    var j = $("#user-permissions").jCheckBox();
+    j.checkAll()
+    setTimeout(function() {
+        j.unCheckAll();
+    }, 1000)
+</script>
