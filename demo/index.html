@@ -1,17 +1,26 @@
 <!DOCTYPE html>
 <html>
+<meta name="theme-color" content="#ff7d1a">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
 
 <head>
     <title>jQuery jCheckBox Plugin</title>
 </head>
 <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
 ">
+<style>
+    .m-t-20 {
+        margin-top: 20px!important;
+    }
+</style>
 
 <body style="background: #f9f9f9;" class="h-100 container">
     <form class="card mt-5">
         <div class="card-body">
             <h4>User Permissions</h4>
-            <div class="form-row user-permissions mt-5" id="user-permissions">
+            <div class="form-row user-permissions" id="user-permissions">
                 <div class="col-md-3 m-t-20 student">
                     <div class="custom-control custom-checkbox">
                         <input type="checkbox" class="custom-control-input parent" id="1" name="roles[]" value="1">
@@ -135,8 +144,8 @@
 </body>
 
 </html>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
-<script src="../dist/jquery.jCheckBox.min.js"></script>
+<script src="jquery/jquery.min.js"></script>
+<script src="dist/jquery.jCheckBox.min.js"></script>
 <script>
     var j = $("#user-permissions").jCheckBox();
     j.checkAll()
