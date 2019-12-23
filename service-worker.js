@@ -6,7 +6,7 @@ self.addEventListener("fetch", function(e) {
                 return console.log("fetch completed: " + e.request.url, t), t && (console.debug("updated cached page: " + e.request.url, t), "GET" === e.request.method && "basic" === t.type && s.put(e.request, t.clone())), t
             }, function(e) {
                 console.log("Error in fetch()", e), e.waitUntil(caches.open("cache").then(function(e) {
-                    return e.addAll(["/", "/index.html", "jquery/jquery.min.js",
+                    return e.addAll(["/", "/index.html", "jquery/jquery.min.js", "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css",
                         "dist/jquery.jCheckBox.min.js", "images/favicon.ico", , "/service-worker.js", "/site.webmanifest"
                     ])
                 }))
