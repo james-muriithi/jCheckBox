@@ -147,9 +147,12 @@
 <script src="jquery/jquery.min.js"></script>
 <script src="dist/jquery.jCheckBox.min.js"></script>
 <script>
-    var j = $("#user-permissions").jCheckBox();
+    var j = $("#user-permissions").jCheckBox({
+        checkChildren: false
+    });
     j.checkAll()
     setTimeout(function() {
-        j.unCheckAll();
+        // j.unCheckAll();
+        j.unCheck('#29');
     }, 1000)
 </script>

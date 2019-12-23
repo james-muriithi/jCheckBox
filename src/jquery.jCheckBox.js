@@ -15,6 +15,7 @@
     var pluginName = "jCheckBox",
         defaults = {
             parentClass: "parent",
+            checkChildren: true,
             onParentChecked: function() {},
             onChildChecked: function() {},
             onParentUnchecked: function() {},
@@ -89,7 +90,9 @@
             var element = $(event.target);
             var id = element.attr("id");
             if (element.is(":checked")) {
-                $(this.element).find("input" + this.settings.parentClass + "-" + id).prop("checked", true);
+                if (this.options.checkChildren) {
+                    $(this.element).find("input" + this.settings.parentClass + "-" + id).prop("checked", true);
+                }
                 this.settings.onParentChecked.call(this, event, element);
             } else {
                 $(this.element).find("input" + this.settings.parentClass + "-" + id).prop("checked", false);
@@ -121,6 +124,19 @@
                 valueArray.push($(this).val());
             });
             return valueArray;
+        }
+
+        // public function to uncheck a checkbox with a certain  value
+        this.unCheck = function(value) {
+            if (value.startsWith(".")) {
+                $(this).find("input" + value + ":checkbox").prop("checked", false);
+                return this;
+            } else if (value.startsWith("#")) {
+                $(this).find("input" + value + ":checkbox").prop("checked", false);
+                return this;
+            }
+            $(this).find("input:checkbox[value='" + value + "']").prop("checked", false);
+            return this;
         }
 
         // return this to enable chaining

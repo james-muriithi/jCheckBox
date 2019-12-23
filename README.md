@@ -1,6 +1,12 @@
 # JQuery plugin for checkboxes
 > A jQuery plugin for selection of checkboxes that are related to each other.
 
+# Demo
+Check the [demo](https://james-muriithi.github.io/jCheckBox/).
+
+
+# Screenshot
+![Screen Shots](https://media.giphy.com/media/gLQd8Rk402PCfGuE0q/giphy.gif)
 <!-- ## Usage
 
 1. Install the generator by running: `npm install -g generator-jquery-boilerplate`
