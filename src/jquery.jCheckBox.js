@@ -90,7 +90,7 @@
             var element = $(event.target);
             var id = element.attr("id");
             if (element.is(":checked")) {
-                if (this.options.checkChildren) {
+                if (this.settings.checkChildren) {
                     $(this.element).find("input" + this.settings.parentClass + "-" + id).prop("checked", true);
                 }
                 this.settings.onParentChecked.call(this, event, element);
