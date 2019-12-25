@@ -18,6 +18,7 @@ Add the following lines below to your page head:
 <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" async="">
 
 <!-- JS -->
+
 <!-- JQuery -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <!-- jCheckBox -->
