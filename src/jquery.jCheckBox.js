@@ -139,6 +139,19 @@
             return this;
         }
 
+        // public function to check a checkbox with a certain  value
+        this.check = function(value) {
+            if (value.startsWith(".")) {
+                $(this).find("input" + value + ":checkbox").prop("checked", true);
+                return this;
+            } else if (value.startsWith("#")) {
+                $(this).find("input" + value + ":checkbox").prop("checked", true);
+                return this;
+            }
+            $(this).find("input:checkbox[value='" + value + "']").prop("checked", true);
+            return this;
+        }
+
         // return this to enable chaining
         return this.each(function() {
             if (!$.data(this, "plugin_" + pluginName)) {
