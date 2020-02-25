@@ -128,11 +128,8 @@
 
         // public function to uncheck a checkbox with a certain  value
         this.unCheck = function(value) {
-            if (value.startsWith(".")) {
-                $(this).find("input" + value + ":checkbox").prop("checked", false);
-                return this;
-            } else if (value.startsWith("#")) {
-                $(this).find("input" + value + ":checkbox").prop("checked", false);
+            if (value.startsWith(".") || value.startsWith("#")) {
+                $(this).find("input" + value + ":checkbox").prop("checked", false).trigger('click');
                 return this;
             }
             $(this).find("input:checkbox[value='" + value + "']").prop("checked", false);
@@ -141,14 +138,11 @@
 
         // public function to check a checkbox with a certain  value
         this.check = function(value) {
-            if (value.startsWith(".")) {
-                $(this).find("input" + value + ":checkbox").prop("checked", true);
-                return this;
-            } else if (value.startsWith("#")) {
-                $(this).find("input" + value + ":checkbox").prop("checked", true);
+            if (value.startsWith(".") || value.startsWith("#")) {
+                $(this).find("input" + value + ":checkbox").prop("checked", true).trigger('click');
                 return this;
             }
-            $(this).find("input:checkbox[value='" + value + "']").prop("checked", true);
+            $(this).find("input:checkbox[value='" + value + "']").prop("checked", true).trigger('click');
             return this;
         }
 
