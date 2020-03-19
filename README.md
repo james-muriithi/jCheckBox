@@ -5,9 +5,10 @@
 
 ### What is this?
 
-Code Box Copy is a lightweight, flexible syntax highlighter jQuery plugin that provides an easy-to-use, simple method to copy any text to the clipboard with a single click.
+jCheckBox is a lightweight, flexible jQuery plugin helps with selection of related checkboxes. 
+> e.g. A parent checkbox which must be checked if a child checkbox is clicked.
 
-### Demo: [Usage Examples](https://james-muriithi.github.io/jCheckBox/)
+### [Demo](https://james-muriithi.github.io/jCheckBox/)
 
 ## Quick Start
 
@@ -52,7 +53,7 @@ Add the following lines below to your page head:
 
 Add the following to the page head or at the end of the body section of your page:
 
-```html
+```javascript
 <script>
 $(document).ready(function () {
     $(".your-check-box-div").jCheckBox();
@@ -62,7 +63,7 @@ $(document).ready(function () {
 
 You may also add optional parameters:
 
-```html
+```javascript
 <script>
 $(document).ready(function () {
     $(".your-div").jCheckBox({
